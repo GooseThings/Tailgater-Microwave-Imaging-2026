@@ -1,6 +1,6 @@
  # Microwave RF Imaging with a Portable "Tailgater" Satellite Antenna
 
-Forked from the repo by Gabe Emerson / Saveitforparts 2023. Email: gabe@saveitforparts.com
+Forked from the repo by Gabe Emerson / Saveitforparts, 2023
 
 Video demo: https://youtu.be/lVOTZxNCgTM
 
