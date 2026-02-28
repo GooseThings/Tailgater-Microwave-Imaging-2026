@@ -1,10 +1,10 @@
-#Microwave imaging using a portable "Tailgater" satellite antenna
+ # Microwave RF Imaging with a Portable "Tailgater" Satellite Antenna
 
 Forked from the repo by Gabe Emerson / Saveitforparts 2023. Email: gabe@saveitforparts.com
 
 Video demo: https://youtu.be/lVOTZxNCgTM
 
-**Introduction:**
+ ## **Introduction:**
 
 This code controls a portable satellite antenna over USB using serial commands. 
 The dish_scan.py program aims the dish to a selected portion of the sky and records
@@ -20,7 +20,7 @@ the code. Please feel free to fix, improve, or add to anything (If you do, I'd
 love to hear what you did and how it worked!)    
 
 
-**Applications:**
+ ## **Applications:**
 
 - Imaging geostationary TV satellites
 - Surveying an environment or room for microwave radiation
@@ -29,7 +29,7 @@ love to hear what you did and how it worked!)
 - Integration with an SDR and other antenna elements (not tested) 
 
 
-**Hardware Requirements:**
+ ## **Hardware Requirements:**
 
 This code has been developed and tested with a Dish Network "Tailgater" portable
 satellite antenna. Specifically, a 2014 version in an octagonal-ish enclosure 
@@ -51,7 +51,7 @@ This code has been tested sucessfully on a range of Linux PCs, from 686-class us
 a low-resource distro, to higher-end running a modern distribution. 
 
 
-**Notes on power supply:**
+ ## **Notes on power supply:**
 
 The USB connection only provides data to/from the dish. Power for the board, LNB, and 
 motors comes from the coax "F" connector. This needs between 13-18V DC, center pin 
@@ -61,13 +61,13 @@ or simply a DC adapter wired to a coax cable. Providing 13V will tell the LNB to
 vertical polarity and 18V will use horizontal polarity. 
 
 
-**Package Requirements:**
+ ## **Package Requirements:**
 
 dish_scan.py uses the numpy, pyserial and regex packages. dish_image uses matplotlib.
 They can be installed individually or by running "pip install -r requirements.txt"
 
 
-**Setting up / testing Tailgater console:**
+ ## **Setting up / testing Tailgater console:**
 
 To connect to a Tailgater antenna with USB A port, you will need an A-to-A cable
 (available online). 
@@ -90,7 +90,7 @@ just hit enter to clear the console. If necessary, close the console or unplug t
 dish to avoid a motor overrun. 
 
 
-**Positioning the dish:**
+ ## **Positioning the dish:**
 
 The Tailgater dish uses a 360-degree counter-clockwise coordinate system, with the coax
 / F connector as "North" / 0 degrees. The dish considers an azimuth of 90 to be 90 degrees
@@ -106,7 +106,7 @@ right, incrementing up from the starting elevation. Remember the coordinate syst
 "backwards" compared to standard compass headings.  
 
 
-**Running a scan:**
+ ## **Running a scan:**
 
 Once the dish is connected, powered, and ready on a USB port, run:
 "python3 dish_scan.py"
@@ -133,7 +133,7 @@ equal to your scan's elevation range). However, it should be enough to get an id
 scan is working. 
 
 	
-**Generating an image from a scan:**
+ ## **Generating an image from a scan:**
 	
 Once a scan has completed, you will have three output files with the same timestamp:
 
@@ -151,7 +151,7 @@ The code will load the corresponding scan-settings file automatically, and opens
 heatmap of the scan in a new window. You can save this heatmap for later use. 
 
 
-**Example Images:**
+ ## **Example Images:**
 I have included several example images to show what a scan looks like:
 	 
 - "dish_image example.png"  The result of running a default scan with dish_scan.py and 
@@ -171,7 +171,7 @@ light, and 50% overlay of each.
 - "tailgater.png"		  Example of the antenna unit used for this project.
 		
 
-**Example Files**
+ ## **Example Files**
 
 I have included some example data files output by dish_scan.py, for processing with dish_image.py
 
@@ -182,7 +182,7 @@ I have included some example data files output by dish_scan.py, for processing w
 - "result-20230321-193653.png":     Preview image created by dish_scan (not used by dish_image)
 
 
-**Additional notes:**
+ ## **Additional notes:**
 	
 The dish_scan.py code contains code for two resolution settings. Low resolution (default) uses
 azangle and elangle commands on the Tailgater console, so each scan position is one degree. The
