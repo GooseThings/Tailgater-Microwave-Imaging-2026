@@ -1,6 +1,6 @@
-#Microwave imaging using portable "Tailgater" satellite antenna. 
+#Microwave imaging using a portable "Tailgater" satellite antenna
 
-Gabe Emerson / Saveitforparts 2023. Email: gabe@saveitforparts.com
+Forked from the repo by Gabe Emerson / Saveitforparts 2023. Email: gabe@saveitforparts.com
 
 Video demo: https://youtu.be/lVOTZxNCgTM
 
