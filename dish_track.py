@@ -1,7 +1,8 @@
 # dish_track.py
 # Real-time satellite tracker for the Tailgater dish antenna
-# Downloads TLE data from Celestrak, lets you pick a satellite from a GUI,
-# then drives the dish motors over serial to follow the satellite in real time.
+# dish_track.py authored by Goose N8GMZ | http://github.com/GooseThings/
+#
+# Downloads TLE data from Celestrak, lets you pick a satellite from a GUI, then drives the dish motors over serial to follow the satellite in real time.
 #
 # Requirements: pip install skyfield pyserial pillow requests tkinter
 #
@@ -28,11 +29,11 @@ BAUD_RATE     = 9600
 OBSERVER_LAT  = 42.87            # Your latitude  (decimal degrees)
 OBSERVER_LON  = -85.68           # Your longitude (decimal degrees)
 
-# Minimum elevation to track (degrees). Below this the satellite is too low.
+# Minimum elevation to track (degrees). Below this the satellite is too low. (Adjust to maximum of dish travel, YMMV)
 MIN_ELEVATION = 5
 MAX_ELEVATION = 70
 
-# How often to update the dish position (seconds)
+# How often to update the dish position (seconds). Play around with this as needed.
 UPDATE_INTERVAL = 2.0
 
 # Celestrak TLE catalogue URLs — the GUI lets you pick which group to load
