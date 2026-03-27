@@ -1,8 +1,10 @@
-#Package requirements for dish_scan.py and dish_image.py
+#Package requirements for dish_scan.py, dish_image.py, and dish_track.py
 
 numpy
 pyserial
 regex
 matplotlib
+requests
+skyfield
 
 
