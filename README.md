@@ -181,8 +181,7 @@ I have included some example data files output by dish_scan.py, for processing w
 
 - "result-20230321-193653.png":     Preview image created by dish_scan (not used by dish_image)
 
-
- ## **Additional notes:**
+## **Additional notes:**
 	
 The dish_scan.py code contains code for two resolution settings. Low resolution (default) uses
 azangle and elangle commands on the Tailgater console, so each scan position is one degree. The
@@ -204,3 +203,30 @@ some definition on the background landscape. "hsv" may also be useful for noisy 
 If you use this code and encounter any problems, feel free to email me at the address at the top
 of this file. However, I may have to refer back to this myself to remember how it works! 
 
+ # dish_track.py
+ This script will let you pick a satellite to track in real time.
+
+ ## Install dependencies first:
+```
+pip install requests
+pip install skyfield
+pip install pyserial
+```
+ ## How to use it:
+
+ - Run ```python3 dish_track.py```
+ - Download TLEs — pick a catalogue (Space Stations, Amateur, Weather, etc.) and hit "Download TLEs". It fetches live data straight from Celestrak.
+ - Connect the dish — enter your serial port (default /dev/ttyACM0) and click "Connect Dish"
+ - Find your satellite — use the filter box to search by name (e.g. type "ISS" or "NOAA")
+ - Preview the pass — click "Preview Pass" to see a table of where the satellite will be over the next 90 minutes
+ - Start Tracking — click "▶ Start Tracking" and the dish will begin commanding azangle/elangle over serial every 2 seconds, following the satellite across the sky. If the satellite is below the horizon it waits and starts moving the dish automatically when it rises.
+
+ ## Key things to edit at the top of the file:
+```
+pythonSERIAL_PORT  = '/dev/ttyACM0'  # your dish port
+OBSERVER_LAT = 42.87           # your latitude
+OBSERVER_LON = -85.68          # your longitude
+UPDATE_INTERVAL = 2.0          # seconds between dish position updates
+```
+
+ 
