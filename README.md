@@ -1,8 +1,9 @@
- # Microwave RF Imaging with a Portable "Tailgater" Satellite Antenna
+ # Microwave RF Imaging & Tracking with a Portable "Tailgater" Satellite Antenna
 
 Gabe Emerson / Saveitforparts, 2023
 
 Video demo: https://youtu.be/lVOTZxNCgTM
+
 
  ## **Introduction:**
 
@@ -11,6 +12,8 @@ The dish_scan.py program aims the dish to a selected portion of the sky and reco
 the RF signal strength. The dish_image.py program reads the resulting data and 
 creates	a heatmap of the scanned area. Frequencies using stock Tailgater antenna 
 hardware will be in the Ku band (~11ghz)
+
+ - Added 3/27/2026 - dish_track.py will track a satellite across the sky using Keppler data pulled from the internet.
 
 Please note that the author is not an expert in Python, Linux, satellites, or 
 radio theory! This code is very experimental, amateur, and not optimized. It will
@@ -63,7 +66,7 @@ vertical polarity and 18V will use horizontal polarity.
 
  ## **Package Requirements:**
 
-dish_scan.py uses the numpy, pyserial and regex packages. dish_image uses matplotlib.
+dish_scan.py uses the numpy, pyserial and regex packages. dish_image uses matplotlib. dish_track uses skyfield and requests, in addition to packages in dish_scan.
 They can be installed individually or by running "pip install -r requirements.txt"
 
 
@@ -210,7 +213,7 @@ of this file. However, I may have to refer back to this myself to remember how i
 ```
 pip install requests
 pip install skyfield
-pip install pyserial
+pip install pyserial (If you haven't already installed it for dish_scan.py)
 ```
  ## How to use it:
 
