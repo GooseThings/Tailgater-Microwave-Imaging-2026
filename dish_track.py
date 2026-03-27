@@ -168,7 +168,7 @@ class TrackingThread(threading.Thread):
 class TrackerApp(tk.Tk):
     def __init__(self):
         super().__init__()
-        self.title("Satellite Tracker")
+        self.title("N8GMZ Tailgater Satellite Tracker")
 
         self.satellites = []
         self.dish = None
